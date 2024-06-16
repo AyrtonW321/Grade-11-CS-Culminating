@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState, useEffect } from 'react'; //import react and the useState and useEffect react hooks
+import { Link, useNavigate } from 'react-router-dom'; // import Link and useNavigate from react router dom
+import './Navbar.css'; // import the NavBar css file
 
-
+// NavBar component
+// takes the login info
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false); // 
     const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
 
