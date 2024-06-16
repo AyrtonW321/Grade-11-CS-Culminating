@@ -24,24 +24,26 @@ const SearchBar = ({ onSearch }) => {
             <h1>Search for your dream destination!</h1>
             <div className='searchBar'>
                 <input placeholder='Location' className='location' autoComplete='off' />
-                <DatePicker
-                    selected={selectedDate} //
-                    onChange={date => setSelectedDate(date)}
+                //use the datepicker from react to create the calendar
+														<DatePicker
+                    selected={selectedDate} // holds the selected state
+                    onChange={date => setSelectedDate(date)} // when there is a change to the date, run the setSelectedDate function that will take the date selected and display it
                     placeholderText="Select a date"
                     className='date'
-                /> //use the datepicker from react to create the calendar
+                /> 
                 <div className='range'>
                     <label htmlFor="budget">Budget: ${selectedBudget}</label>
                     <div className='field'>
                         <div className='value left'>0</div>
-                        <input
+                        // range slider for the budget, min 0 max 3000
+																						<input
                             type="range"
                             id="budget"
                             min="0"
                             max="3000"
                             step="100"
-                            value={selectedBudget}
-                            onChange={(e) => setSelectedBudget(parseInt(e.target.value))}
+                            value={selectedBudget} // the calue will be the selected value
+                            onChange={(e) => setSelectedBudget(parseInt(e.target.value))} // when the user scrolls/interacts with the slider take the value that the user slid to and set that as the selected budget
                         />
                         <div className='value right'>3000</div>
                     </div>
