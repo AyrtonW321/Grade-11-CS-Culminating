@@ -3,13 +3,16 @@ import DatePicker from 'react-datepicker'; // import the datepicker template fro
 import 'react-datepicker/dist/react-datepicker.css'; // import the datepicker css template
 import './SearchBar.css'; //import the css for the search bar
 
-// SearchBar fucntion for the 
+// SearchBar component
+// takes the onSearch function as a param
 const SearchBar = ({ onSearch }) => {
-    const [selectedDate, setSelectedDate] = useState(null);
-    const [selectedBudget, setSelectedBudget] = useState(0);
+				// manage the component's state with useState hook
+    const [selectedDate, setSelectedDate] = useState(null); // store the selected date from the search, starts off with null
+    const [selectedBudget, setSelectedBudget] = useState(0); // store the selected budget from the search, starts off with 0
 
+			// function to handle the input
     const handleInputChange = () => {
-        const location = document.querySelector('.location').value;
+        const location = document.querySelector('.location').value; // create constant to hold the location class
         const budget = selectedBudget;
 
         // Pass the search criteria to the parent component
