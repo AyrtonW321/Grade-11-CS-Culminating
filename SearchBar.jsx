@@ -25,11 +25,11 @@ const SearchBar = ({ onSearch }) => {
             <div className='searchBar'>
                 <input placeholder='Location' className='location' autoComplete='off' />
                 <DatePicker
-                    selected={selectedDate}
+                    selected={selectedDate} //
                     onChange={date => setSelectedDate(date)}
                     placeholderText="Select a date"
                     className='date'
-                />
+                /> //use the datepicker from react to create the calendar
                 <div className='range'>
                     <label htmlFor="budget">Budget: ${selectedBudget}</label>
                     <div className='field'>
@@ -46,7 +46,7 @@ const SearchBar = ({ onSearch }) => {
                         <div className='value right'>3000</div>
                     </div>
                 </div>
-                <button onClick={handleInputChange}>
+                <button onClick={handleInputChange}> // when the button is pressed run the handleInput function
                     Search
                 </button>
             </div>
@@ -54,4 +54,4 @@ const SearchBar = ({ onSearch }) => {
     );
 };
 
-export default SearchBar;
+export default SearchBar; //export the SearchBar component
