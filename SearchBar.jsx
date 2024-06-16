@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import './SearchBar.css';
+import React, { useState } from 'react'; // import react and the useState react hook
+import DatePicker from 'react-datepicker'; // import the datepicker template from react
+import 'react-datepicker/dist/react-datepicker.css'; // import the datepicker css template
+import './SearchBar.css'; //import the css for the search bar
 
+// SearchBar fucntion for the 
 const SearchBar = ({ onSearch }) => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedBudget, setSelectedBudget] = useState(0);
