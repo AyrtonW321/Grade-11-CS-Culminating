@@ -10,10 +10,10 @@ const SearchBar = ({ onSearch }) => {
     const [selectedDate, setSelectedDate] = useState(null); // store the selected date from the search, starts off with null
     const [selectedBudget, setSelectedBudget] = useState(0); // store the selected budget from the search, starts off with 0
 
-			// function to handle the input
+			// function to handle the input from the user
     const handleInputChange = () => {
         const location = document.querySelector('.location').value; // create constant to hold the location class
-        const budget = selectedBudget;
+        let budget = selectedBudget; // create a variable to hold the selected budget
 
         // Pass the search criteria to the parent component
         onSearch(location, budget);
